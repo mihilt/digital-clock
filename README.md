@@ -1,4 +1,4 @@
-# 알람 디지털시계
+# 디지털시계
 
 개요: Synaptic CAD의 Verilogger로 개발, Altera사의 DE2-115보드를 통해 디지털 시계를 구현했다. 
 
