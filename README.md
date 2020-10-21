@@ -57,23 +57,23 @@ button 입력을 1clock 폭을 갖는 pulse로 변환해준다.
 
 나는 보드의 button을 사용하지 않고, Slide Switch를 사용하긴 했다. 그래도 위와 같은 변환과정이 없었을 때 스위치를 빠르게 올리지 않을 경우 많은 입력이 발생하는 것을 확인했었다.
 
-<kbd><img src="images/image13.png">kbd>
+<kbd><img src="images/image13.png"><kbd>
 
 버튼 입력에 대해 나오는 출력을 통해 동작에 대한 상태 변화를 해준다.
 
 ### 4. led.v
 
-<kbd><img src="images/image14.png">kbd>
+<kbd><img src="images/image14.png"><kbd>
 
 7-segment LED에 입력된 데이터값에 따라 보이는 LED의 상태를 나눴다.
 
-<kbd><img src="images/image15.png">kbd>
+<kbd><img src="images/image15.png"><kbd>
 
 모듈로 24카운터를 사용한 값을 10의 자리와 1의 자리로 나눠주며, 값이 10 미만일 경우 10의 자리 수를 7-segment LED 에서 나타내지 않기 위해 DEFAULT로 만들어준다.
 
 ### 6. project.v
 
-<kbd><img src="images/image16.png">kbd>
+<kbd><img src="images/image16.png"><kbd>
 
 앞에 설명한 모듈을 이용한 프로젝트 모듈이다. 이 프로젝트 모듈 안을 살펴보자.
 
@@ -83,11 +83,11 @@ button 입력을 1clock 폭을 갖는 pulse로 변환해준다.
 
 1초 clock은 sec의 enable 신호를 발생시키고, sec은 sec10의 enable 신호를, sec10은 min을, min은 min10, min10은 hour의 enable 신호를 발생 시켜 동작하게 한다.
 
-<kbd><img src="images/Untitled%203.png">kbd>
+<kbd><img src="images/Untitled%203.png"><kbd>
 
 - 디지털시계
 
-<kbd><img src="images/image19.png">kbd>
+<kbd><img src="images/image19.png"><kbd>
 
 50000000 모듈러 카운터를 사용하여 1초 단위를 구성했다.
 statemachine 에서 나온 set_clock 신호를 통해 신호를 받게 되면, 카운터의 enable 신호에 0을 주게 하여 clock에 따라 카운트가 되는 동작을 멈추게 했다.
@@ -104,7 +104,7 @@ statemachine 에서 나온 set_clock 신호를 통해 신호를 받게 되면, �
 
 - 알람
 
-<kbd><img src="images/image21.png">kbd>
+<kbd><img src="images/image21.png"><kbd>
 
 모듈로 10 카운터, 모듈로 6카운터를 이용하여 분을 설정하고 모듈로 24카운터를 사용하여 시간을 설정했다. 사진에는 없지만, 위에 각각의 레지스터 공간들을 사전에 넣어 놨었는데 그 안에 statemachine 버튼 입력값을 통해 저장될 값들을 넣어준다.
 
@@ -118,7 +118,7 @@ Always문을 사용하여 시계의 동작이 알람 설정, 스톱워치, 디�
 
 - LED, 알람 구현
 
-<kbd><img src="images/image23.png">kbd>
+<kbd><img src="images/image23.png"><kbd>
 
 위에는 저장된 num0~num5 를 LED module 에 넣어주는 것이고 아래는 always문을 이용한 알람 동작 소스다.
 
